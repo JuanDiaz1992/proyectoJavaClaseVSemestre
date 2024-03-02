@@ -8,8 +8,6 @@ public class AnhoBisiesto {
     }
 
     public void validartAnho(){
-        Scanner scaner = new Scanner(System.in);
-        System.out.println("Ingrese un año: ");
         if(this.anho%4 != 0){
             System.out.println("/////////////////////////////////////");
             System.out.println("El año "+this.anho + " NO es bisiesto");
