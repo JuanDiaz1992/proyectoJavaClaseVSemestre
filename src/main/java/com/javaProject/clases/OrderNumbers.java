@@ -14,6 +14,8 @@ public class OrderNumbers {
         this.numberTree = numberTree;
         this.organizer();
     }
+
+
     public void organizer(){
 
         if (

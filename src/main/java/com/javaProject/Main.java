@@ -3,6 +3,7 @@ import com.javaProject.clases.*;
 
 import java.util.Scanner;
 
+//Ejecute este archivo para ver un menú con todos los ejercicios planteados :)
 
 public class Main {
     public static void main(String[] args){
@@ -20,7 +21,7 @@ public class Main {
             System.out.println("6) Crear figura");
             System.out.println("7) Ordenar 3 números");
             System.out.println("8) Sumar números aleatorios");
-            System.out.println("9) MCD");
+            System.out.println("9) Más opciones");
             System.out.println("0) Salir");
             System.out.print("Elija una opción: ");
             option  = scanner.nextInt();
@@ -113,12 +114,7 @@ public class Main {
                     break;
 
                 case 9:
-                    System.out.print("Ingrese el primer número: ");
-                    int selectNumberOne = scanner.nextInt();
-                    System.out.print("Ingrese el segundo número: ");
-                    int selectNumberTwo = scanner.nextInt();
-                    Mcd mcd = new Mcd(selectNumberOne,selectNumberTwo);
-                    Main.pressEnter();
+                    SecondMenu.main();
                 default:
             }
         }while (option != 0);
