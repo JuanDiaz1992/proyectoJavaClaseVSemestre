@@ -1,8 +1,6 @@
 package com.javaProject;
-import java.util.HashMap;
+import java.util.*;
 
-import java.util.Map;
-import java.util.Scanner;
 import com.javaProject.clases.*;
 
 public class SecondMenu extends Main{
@@ -18,6 +16,7 @@ public class SecondMenu extends Main{
             System.out.println("3) Número más grande de una lista");
             System.out.println("4) Eliminar duplicados de una lista");
             System.out.println("5) Eliminar impares");
+            System.out.println("6) Eliminar valores menores a un hashmap");
             System.out.println("0) Para volver atrás");
             System.out.print("Elija una opción: ");
             option = scanner.nextInt();
@@ -58,12 +57,27 @@ public class SecondMenu extends Main{
                     break;
 
                 case 6:
-                    Map<String, Integer> myHashMap = new HashMap<>();
-                    myHashMap.put("Dato1", 10);
-                    myHashMap.put("Dato2", 5);
-                    myHashMap.put("Dato3", 2);
-                    myHashMap.put("Dato4", 3);
-                    myHashMap.put("Dato5", 6);
+                    Map<String, Integer> hashMap = new HashMap<>();
+                    for (int i = 1; i < 10; i++) {
+                        hashMap.put("Valor"+i,i);
+                    }
+                    TreeMap<String, Integer> orderHahsMap = new TreeMap<>(hashMap); //Añado esto para ordenar el hashmap antes de mostrarlo
+                    System.out.println("HashMap actual: "+orderHahsMap);
+                    System.out.print("Ingrese un número entre 1 a 9: ");
+                    int optionDeleteHasmap = scanner.nextInt();
+                    DeleteDataFromHashMap deleteDataFromHashMap = new DeleteDataFromHashMap(hashMap,optionDeleteHasmap);
+                    deleteDataFromHashMap.runProgram();
+                    SecondMenu.pressEnter();
+                    break;
+
+                case 7:
+                    Map<String, double[]> studentGrades = new HashMap<>();
+                    studentGrades.put("Michael", new double[]{5, 4, 5});
+                    studentGrades.put("Maria", new double[]{3, 5, 2});
+                    studentGrades.put("Pedro", new double[]{4, 3, 0});
+                    CalculateStudentAverage calculateStudentAverage = new CalculateStudentAverage(studentGrades);
+                    calculateStudentAverage.calculateAverage();
+                    SecondMenu.pressEnter();
                     break;
                 default:
 

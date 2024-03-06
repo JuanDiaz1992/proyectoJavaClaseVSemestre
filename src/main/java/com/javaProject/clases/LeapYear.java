@@ -1,20 +1,20 @@
 package com.javaProject.clases;
-import java.util.Scanner;
-public class AnhoBisiesto {
-    private int anho;
 
-    public AnhoBisiesto(int anho){
-        this.anho = anho;
+public class LeapYear {
+    private int year;
+
+    public LeapYear(int year){
+        this.year = year;
     }
 
     public void validartAnho(){
-        if(this.anho%4 != 0){
+        if(this.year%4 != 0){
             System.out.println("/////////////////////////////////////");
-            System.out.println("El año "+this.anho + " NO es bisiesto");
+            System.out.println("El año "+this.year + " NO es bisiesto");
             System.out.println("/////////////////////////////////////");
         }else{
             System.out.println("/////////////////////////////////////");
-            System.out.println("El año "+this.anho + " es bisiesto");
+            System.out.println("El año "+this.year + " es bisiesto");
             System.out.println("/////////////////////////////////////");
         }
 
@@ -22,10 +22,10 @@ public class AnhoBisiesto {
     }
 
     public int getAnho() {
-        return anho;
+        return year;
     }
 
     public void setAnho(int anho) {
-        this.anho = anho;
+        this.year = anho;
     }
 }

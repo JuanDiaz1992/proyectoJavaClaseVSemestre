@@ -30,8 +30,8 @@ public class Main {
                     //Año bisiesto
                     System.out.print("Ingrese el año: ");
                     int inputAnho = scanner.nextInt();
-                    AnhoBisiesto anhoBisiesto = new AnhoBisiesto(inputAnho);
-                    anhoBisiesto.validartAnho();
+                    LeapYear leapYear = new LeapYear(inputAnho);
+                    leapYear.validartAnho();
                     Main.pressEnter();
                     break;
                 case 2:
@@ -41,8 +41,8 @@ public class Main {
                     System.out.println("3) tijera");
                     System.out.print("Ingrese el numero correspondiente: ");
                     int playerOption = scanner.nextInt();
-                    PiedraPapelOTijera piedraPapelOTijera = new PiedraPapelOTijera(playerOption);
-                    piedraPapelOTijera.play();
+                    RockPaperScissors rockPaperScissors = new RockPaperScissors(playerOption);
+                    rockPaperScissors.play();
                     Main.pressEnter();
                     break;
                 case 3:
@@ -55,8 +55,8 @@ public class Main {
                     int optionConversor = scanner.nextInt();
                     System.out.print("Ingrese la cantidad de COP a cambiar: ");
                     int cop = scanner.nextInt();
-                    ConversorMoneda conversorMoneda = new ConversorMoneda(cop, optionConversor);
-                    conversorMoneda.conversor();
+                    CurrencyConverter currencyConverter = new CurrencyConverter(cop, optionConversor);
+                    currencyConverter.conversor();
                     Main.pressEnter();
                     break;
 
@@ -68,8 +68,8 @@ public class Main {
                     double tasaInteresAnual = scanner.nextDouble();
                     System.out.print("Ingrese el número de años: ");
                     double numAnios = scanner.nextInt();
-                    InteresCompuesto interesCompuesto = new InteresCompuesto(montoInicial, tasaInteresAnual, numAnios);
-                    interesCompuesto.validateInteres();
+                    CompoundInterest compoundInterest = new CompoundInterest(montoInicial, tasaInteresAnual, numAnios);
+                    compoundInterest.validateInteres();
                     Main.pressEnter();
                     break;
 
@@ -78,7 +78,7 @@ public class Main {
                     System.out.print("Ingrese el número que dese asumar, recuerde agregár más de dos digitos: ");
                     scanner.nextLine();
                     String strNumber = scanner.nextLine();
-                    SumaDigitos addNumbers = new SumaDigitos(strNumber);
+                    AddDigits addNumbers = new AddDigits(strNumber);
                     addNumbers.addNumbers();
                     Main.pressEnter();
                     break;

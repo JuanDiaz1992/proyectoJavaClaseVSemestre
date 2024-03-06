@@ -1,9 +1,9 @@
 package com.javaProject.clases;
 
-public class SumaDigitos {
+public class AddDigits {
     private String strNumber;
 
-    public SumaDigitos(String strNumber){
+    public AddDigits(String strNumber){
         this.strNumber = strNumber;
     }
 
