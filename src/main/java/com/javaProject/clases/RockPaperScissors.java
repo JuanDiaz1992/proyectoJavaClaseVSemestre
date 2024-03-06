@@ -13,7 +13,7 @@ public class RockPaperScissors {
 
     }
 
-    public void play(){
+    public String play(){
         int result;
         if (playerOption == machineOption) {
             result = 0; // Empate
@@ -28,14 +28,15 @@ public class RockPaperScissors {
         switch (result) {
             case 0:
                 System.out.println("Empate, ambos escogieron la misma opción.");
-                break;
+                return "<html>Empate, ambos escogieron <br> la misma opción.<html>";
             case 1:
-                System.out.println("Haz ganado, escogiste "+ getOptionName(this.playerOption) +" y la máquina escogió " + getOptionName(machineOption));
-                break;
+                System.out.println("Haz ganado, escogiste "+ getOptionName(this.playerOption)  +" y la máquina escogió " + getOptionName(machineOption));
+                return "<html> Haz ganado 😁, escogiste "+ getOptionName(this.playerOption) +"<br> y la máquina escogió " + getOptionName(machineOption)+"<html>";
             case -1:
-                System.out.println("Haz perdido, escogiste "+getOptionName(this.playerOption)+ " y la máquina escogió " + getOptionName(machineOption));
-                break;
+                System.out.println("Haz perdido, escogiste "+getOptionName(this.playerOption)+System.lineSeparator()+ " y la máquina escogió " + getOptionName(machineOption));
+                return "<html> Haz perdido 😢, escogiste "+getOptionName(this.playerOption)+ "<br> y la máquina escogió " + getOptionName(machineOption)+"<html>";
         }
+        return null;
     }
     private String getOptionName(int option) {
         switch (option) {

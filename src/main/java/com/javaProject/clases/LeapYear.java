@@ -7,15 +7,17 @@ public class LeapYear {
         this.year = year;
     }
 
-    public void validartAnho(){
+    public String validartAnho(){
         if(this.year%4 != 0){
             System.out.println("/////////////////////////////////////");
             System.out.println("El año "+this.year + " NO es bisiesto");
             System.out.println("/////////////////////////////////////");
+            return "El año "+this.year + " NO es bisiesto";
         }else{
             System.out.println("/////////////////////////////////////");
             System.out.println("El año "+this.year + " es bisiesto");
             System.out.println("/////////////////////////////////////");
+            return "El año "+this.year + " es bisiesto";
         }
 
 
