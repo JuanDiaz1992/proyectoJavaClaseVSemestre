@@ -1,10 +1,10 @@
-package com.grapicInterface;
+package com.graphicInterface;
 
 
+import com.graphicInterface.view.*;
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialLighterIJTheme;
 import java.awt.Font;
 import com.javaProject.clases.*;
-import com.grapicInterface.view.*;
 import java.awt.BorderLayout;
 import java.util.Scanner;
 import javax.swing.JPanel;
@@ -28,7 +28,7 @@ public class Dahsboard extends javax.swing.JFrame {
         initStyles();
     }
     private void panel(JPanel p){
-        p.setSize(355, 344);
+        p.setSize(400, 421);
         p.setLocation(0,0);
 
         container.removeAll();
@@ -81,9 +81,16 @@ public class Dahsboard extends javax.swing.JFrame {
         opc13 = new javax.swing.JButton();
         opc14 = new javax.swing.JButton();
         opc15 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        title = new javax.swing.JLabel();
         container = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
+
+        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
 
         jPanel2.setBackground(new java.awt.Color(255, 184, 112));
 
@@ -157,7 +164,7 @@ public class Dahsboard extends javax.swing.JFrame {
         });
 
         opc4.setBackground(new java.awt.Color(51, 51, 51));
-        opc4.setText("Año Bisiesto");
+        opc4.setText("Interés Compuesto");
         opc4.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
         opc4.setBorderPainted(false);
         opc4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -180,7 +187,7 @@ public class Dahsboard extends javax.swing.JFrame {
         });
 
         opc5.setBackground(new java.awt.Color(51, 51, 51));
-        opc5.setText("Año Bisiesto");
+        opc5.setText("Sumar digitos");
         opc5.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
         opc5.setBorderPainted(false);
         opc5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -203,7 +210,7 @@ public class Dahsboard extends javax.swing.JFrame {
         });
 
         opc6.setBackground(new java.awt.Color(51, 51, 51));
-        opc6.setText("Año Bisiesto");
+        opc6.setText("Crear figura");
         opc6.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
         opc6.setBorderPainted(false);
         opc6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -226,39 +233,64 @@ public class Dahsboard extends javax.swing.JFrame {
         });
 
         opc7.setBackground(new java.awt.Color(51, 51, 51));
-        opc7.setText("Año Bisiesto");
+        opc7.setText("Ordenar 3 núm...");
         opc7.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
         opc7.setBorderPainted(false);
         opc7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         opc7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         opc7.setIconTextGap(12);
+        opc7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                opc7MouseClicked(evt);
+            }
+        });
+        opc7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                opc7ActionPerformed(evt);
+            }
+        });
 
         opc8.setBackground(new java.awt.Color(51, 51, 51));
-        opc8.setText("Año Bisiesto");
+        opc8.setText("Sumar números");
         opc8.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
         opc8.setBorderPainted(false);
         opc8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         opc8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         opc8.setIconTextGap(12);
+        opc8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                opc8MouseClicked(evt);
+            }
+        });
 
         opc9.setBackground(new java.awt.Color(51, 51, 51));
-        opc9.setText("Año Bisiesto");
+        opc9.setText("MCD");
         opc9.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
         opc9.setBorderPainted(false);
         opc9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         opc9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         opc9.setIconTextGap(12);
+        opc9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                opc9MouseClicked(evt);
+            }
+        });
 
         opc10.setBackground(new java.awt.Color(51, 51, 51));
-        opc10.setText("Año Bisiesto");
+        opc10.setText("Max");
         opc10.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
         opc10.setBorderPainted(false);
         opc10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         opc10.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         opc10.setIconTextGap(12);
+        opc10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                opc10ActionPerformed(evt);
+            }
+        });
 
         opc11.setBackground(new java.awt.Color(51, 51, 51));
-        opc11.setText("Año Bisiesto");
+        opc11.setText("Producto List");
         opc11.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
         opc11.setBorderPainted(false);
         opc11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -266,7 +298,7 @@ public class Dahsboard extends javax.swing.JFrame {
         opc11.setIconTextGap(12);
 
         opc12.setBackground(new java.awt.Color(51, 51, 51));
-        opc12.setText("Año Bisiesto");
+        opc12.setText("Eliminar Dupli...");
         opc12.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
         opc12.setBorderPainted(false);
         opc12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -274,7 +306,7 @@ public class Dahsboard extends javax.swing.JFrame {
         opc12.setIconTextGap(12);
 
         opc13.setBackground(new java.awt.Color(51, 51, 51));
-        opc13.setText("Año Bisiesto");
+        opc13.setText("Eliminar impares");
         opc13.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
         opc13.setBorderPainted(false);
         opc13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -282,7 +314,7 @@ public class Dahsboard extends javax.swing.JFrame {
         opc13.setIconTextGap(12);
 
         opc14.setBackground(new java.awt.Color(51, 51, 51));
-        opc14.setText("Año Bisiesto");
+        opc14.setText("Valores Hashm..");
         opc14.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
         opc14.setBorderPainted(false);
         opc14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -290,12 +322,16 @@ public class Dahsboard extends javax.swing.JFrame {
         opc14.setIconTextGap(12);
 
         opc15.setBackground(new java.awt.Color(51, 51, 51));
-        opc15.setText("Año Bisiesto");
+        opc15.setText("Promedio estudi");
         opc15.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
         opc15.setBorderPainted(false);
         opc15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         opc15.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         opc15.setIconTextGap(12);
+
+        jLabel1.setFont(new java.awt.Font("Harlow Solid Italic", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Menú Principal");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -311,24 +347,27 @@ public class Dahsboard extends javax.swing.JFrame {
                             .addComponent(opc5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(opc3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(opc1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(opc10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(opc13, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(opc6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(opc13, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(opc10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(opc4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                            .addComponent(opc6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(opc8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(opc11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(opc14, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(opc2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(opc4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(opc8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(opc11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(opc12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(opc14, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(opc15, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(opc12, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(opc15, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(51, 51, 51)
+                .addGap(29, 29, 29)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(opc1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(opc2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -358,20 +397,56 @@ public class Dahsboard extends javax.swing.JFrame {
                     .addComponent(opc14, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(opc15, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel3.setBackground(new java.awt.Color(102, 102, 102));
+
+        title.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        title.setForeground(new java.awt.Color(255, 255, 255));
+        title.setText("Bienvenido");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(23, Short.MAX_VALUE)
+                .addComponent(title)
+                .addContainerGap())
+        );
+
+        container.setBorder(javax.swing.BorderFactory.createEmptyBorder(50, 50, 50, 50));
         container.setMinimumSize(new java.awt.Dimension(355, 0));
+        container.setPreferredSize(new java.awt.Dimension(400, 0));
+
+        jLabel2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel2.setText("Elige alguna de las opciones del menú 😊");
+        jLabel2.setIconTextGap(0);
 
         javax.swing.GroupLayout containerLayout = new javax.swing.GroupLayout(container);
         container.setLayout(containerLayout);
         containerLayout.setHorizontalGroup(
             containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 366, Short.MAX_VALUE)
+            .addGroup(containerLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         containerLayout.setVerticalGroup(
             containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(containerLayout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(101, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -380,17 +455,23 @@ public class Dahsboard extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(container, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(container, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 8, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(container, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(container, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -416,7 +497,10 @@ public class Dahsboard extends javax.swing.JFrame {
     }//GEN-LAST:event_opc6ActionPerformed
 
     private void opc6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_opc6MouseClicked
-        // TODO add your handling code here:
+        title.setText("Crear figura");
+        AsterisksPatternView asterisksPatternView = new AsterisksPatternView();
+        panel(asterisksPatternView);
+        
     }//GEN-LAST:event_opc6MouseClicked
 
     private void opc5KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_opc5KeyPressed
@@ -428,7 +512,9 @@ public class Dahsboard extends javax.swing.JFrame {
     }//GEN-LAST:event_opc5ActionPerformed
 
     private void opc5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_opc5MouseClicked
-        // TODO add your handling code here:
+        title.setText("Sumar una cadena de digitos");
+        AddDigitsView addDigitsView = new AddDigitsView();
+        panel(addDigitsView); 
     }//GEN-LAST:event_opc5MouseClicked
 
     private void opc4KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_opc4KeyPressed
@@ -440,7 +526,9 @@ public class Dahsboard extends javax.swing.JFrame {
     }//GEN-LAST:event_opc4ActionPerformed
 
     private void opc4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_opc4MouseClicked
-        // TODO add your handling code here:
+        title.setText("Validar interes compuesto");
+        CompoundInterestView compoundInterestView = new CompoundInterestView();
+        panel(compoundInterestView); 
     }//GEN-LAST:event_opc4MouseClicked
 
     private void opc3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_opc3KeyPressed
@@ -452,6 +540,7 @@ public class Dahsboard extends javax.swing.JFrame {
     }//GEN-LAST:event_opc3ActionPerformed
 
     private void opc3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_opc3MouseClicked
+        title.setText("Convertidor de moneda");
         CurrencyConverterView currencyConverterView= new CurrencyConverterView();
         panel(currencyConverterView);
     }//GEN-LAST:event_opc3MouseClicked
@@ -465,6 +554,7 @@ public class Dahsboard extends javax.swing.JFrame {
     }//GEN-LAST:event_opc2ActionPerformed
 
     private void opc2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_opc2MouseClicked
+        title.setText("Piedra, papel o tijera");
         RockPaperScissorsView rockPaperScissorsView = new RockPaperScissorsView();
         panel(rockPaperScissorsView);
     }//GEN-LAST:event_opc2MouseClicked
@@ -478,9 +568,38 @@ public class Dahsboard extends javax.swing.JFrame {
     }//GEN-LAST:event_opc1ActionPerformed
 
     private void opc1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_opc1MouseClicked
+        title.setText("Validar si un año es bisiesto");
         LeapYearView year = new LeapYearView();
         panel(year);
     }//GEN-LAST:event_opc1MouseClicked
+
+    private void opc7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opc7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_opc7ActionPerformed
+
+    private void opc10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opc10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_opc10ActionPerformed
+
+    private void opc7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_opc7MouseClicked
+        title.setText("Ordenar 3 números");
+        OrderNumbersView orderNumbersView = new OrderNumbersView();
+        panel(orderNumbersView);
+        
+    }//GEN-LAST:event_opc7MouseClicked
+
+    private void opc8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_opc8MouseClicked
+        title.setText("Sumar números aleatorios");
+        AddRandomNumbersView addRandomNumbersView = new AddRandomNumbersView();
+        panel(addRandomNumbersView);
+        
+    }//GEN-LAST:event_opc8MouseClicked
+
+    private void opc9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_opc9MouseClicked
+        title.setText("Mínimo común denominador");
+        McdView mcdView= new McdView();
+        panel(mcdView);
+    }//GEN-LAST:event_opc9MouseClicked
 
     /**
      * @param args the command line arguments
@@ -520,8 +639,11 @@ public class Dahsboard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel container;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JButton opc1;
     private javax.swing.JButton opc10;
     private javax.swing.JButton opc11;
@@ -537,5 +659,6 @@ public class Dahsboard extends javax.swing.JFrame {
     private javax.swing.JButton opc7;
     private javax.swing.JButton opc8;
     private javax.swing.JButton opc9;
+    private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 }

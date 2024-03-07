@@ -7,7 +7,7 @@ public class AddDigits {
         this.strNumber = strNumber;
     }
 
-    public void addNumbers() {
+    public String addNumbers() {
         int countNumbers = 0;
         boolean insertLetter = false;
         for (int i = 0; i < this.strNumber.length(); i++) {
@@ -21,9 +21,12 @@ public class AddDigits {
         }
         if (!insertLetter){
             System.out.println("La suma de " + this.strNumber + " es: " + countNumbers);
+            return "La suma de " + this.strNumber + " es: " + countNumbers;
         }else {
             System.out.println("La suma de " + this.strNumber + " es: " + countNumbers+" Pero intenta no usar letras en esta operación");
+            return "<html>La suma de " + this.strNumber + " es: " + countNumbers+" <br>Aunque intenta no usar letras en esta operación<html>";
         }
+
 
     }
 

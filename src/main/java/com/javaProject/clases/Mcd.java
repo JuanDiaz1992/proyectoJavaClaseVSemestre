@@ -9,13 +9,14 @@ public class Mcd {
         this.calculateMCD();
 
     }
-    public void calculateMCD(){
+    public String calculateMCD(){
         while (this.numberTwo !=0){
             int temp = this.numberTwo;
             this.numberTwo = this.numberOne % this.numberTwo;
             this.numberOne = temp;
         }
         System.out.println("El MCD es: " + this.numberOne);
+        return "El MCD es: " + this.numberOne;
     }
 
 }

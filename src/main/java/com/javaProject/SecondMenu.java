@@ -12,11 +12,12 @@ public class SecondMenu extends Main{
         do {
             System.out.println("Menu Principal");
             System.out.println("1) MCD");
-            System.out.println("2) Producto de una lista) MCD");
+            System.out.println("2) Producto de una lista");
             System.out.println("3) Número más grande de una lista");
             System.out.println("4) Eliminar duplicados de una lista");
             System.out.println("5) Eliminar impares");
             System.out.println("6) Eliminar valores menores a un hashmap");
+            System.out.println("7) Promedio estudiantes");
             System.out.println("0) Para volver atrás");
             System.out.print("Elija una opción: ");
             option = scanner.nextInt();

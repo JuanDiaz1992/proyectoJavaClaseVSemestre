@@ -4,19 +4,20 @@ public class AsterisksPattern {
     private Integer amount;
     public AsterisksPattern(Integer amount){
         this.amount = amount;
-        this.generateTriangle();
+
     }
-    public void generateTriangle(){
-        if (this.amount > 0 && this.amount <10){
+    public String generateTriangle(){
+        StringBuilder triangle = new StringBuilder();
+        if (this.amount > 0 && this.amount <=8){
             for (int i = 1; i <= this.amount; i++) {
                 for (int j = 1; j <= i; j++) {
-                    System.out.print("*");
+                    triangle.append("*");
                 }
-                System.out.println();
+                triangle.append("<br>");
             }
         }else {
-            System.out.println("Ingresa un número válido");
+            triangle.append("Ingresa un número válido");
         }
-
+        return "<html>" + triangle.toString() + "</html>";
     }
 }

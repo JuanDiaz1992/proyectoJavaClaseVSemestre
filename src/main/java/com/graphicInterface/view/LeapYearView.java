@@ -2,19 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package com.grapicInterface.view;
+package com.graphicInterface.view;
 import com.javaProject.clases.*;
 
 /**
  *
  * @author juann
  */
-public class CurrencyConverterView extends javax.swing.JPanel {
+public class LeapYearView extends javax.swing.JPanel {
 
     /**
      * Creates new form LeapYearView
      */
-    public CurrencyConverterView() {
+    public LeapYearView() {
         initComponents();
     }
 
@@ -31,21 +31,19 @@ public class CurrencyConverterView extends javax.swing.JPanel {
         input = new javax.swing.JTextField();
         consult = new javax.swing.JButton();
         result = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        consult1 = new javax.swing.JButton();
 
-        setMinimumSize(new java.awt.Dimension(355, 0));
-        setPreferredSize(new java.awt.Dimension(355, 344));
+        setMinimumSize(new java.awt.Dimension(400, 421));
+        setPreferredSize(new java.awt.Dimension(400, 421));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel1.setText("Ingrese un valor en COP");
+        jLabel1.setText("Ingrese el año a consultar");
 
         input.setBackground(new java.awt.Color(102, 102, 102));
         input.setForeground(new java.awt.Color(255, 255, 255));
 
         consult.setForeground(new java.awt.Color(51, 51, 51));
-        consult.setText("USD  🔎");
+        consult.setText("Consultar 🔎");
         consult.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         consult.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -55,51 +53,31 @@ public class CurrencyConverterView extends javax.swing.JPanel {
 
         result.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
 
-        jLabel2.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jLabel2.setText("Convertidor de moneda");
-
-        consult1.setForeground(new java.awt.Color(51, 51, 51));
-        consult1.setText("EUR 🔎");
-        consult1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        consult1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                consult1MouseClicked(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(74, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(result, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(input, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(consult, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(consult1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(23, 23, 23))
+                    .addComponent(result)
+                    .addComponent(consult, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(173, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(77, 77, 77)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(50, 50, 50)
                 .addComponent(jLabel1)
-                .addGap(3, 3, 3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(input, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(consult, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(consult1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
-                .addComponent(result, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(21, 21, 21))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(consult, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 176, Short.MAX_VALUE)
+                .addComponent(result)
+                .addGap(72, 72, 72))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -112,17 +90,11 @@ public class CurrencyConverterView extends javax.swing.JPanel {
         result.setText(valuReturn);
     }//GEN-LAST:event_consultMouseClicked
 
-    private void consult1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_consult1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_consult1MouseClicked
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton consult;
-    private javax.swing.JButton consult1;
     private javax.swing.JTextField input;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel result;
     // End of variables declaration//GEN-END:variables
 }

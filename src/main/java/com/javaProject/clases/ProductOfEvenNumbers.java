@@ -18,4 +18,8 @@ public class ProductOfEvenNumbers {
         }
         System.out.println("El producto de los números paresde la linsta "+ Arrays.toString(this.numbersList)+" es: " + productoPares);
     }
+
+    public int[] getNumbersList() {
+        return numbersList;
+    }
 }

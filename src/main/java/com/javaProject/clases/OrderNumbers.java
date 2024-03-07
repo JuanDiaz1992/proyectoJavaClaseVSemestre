@@ -12,11 +12,10 @@ public class OrderNumbers {
         this.numberOne = numberOne;
         this.numberTwo = numberTwo;
         this.numberTree = numberTree;
-        this.organizer();
     }
 
 
-    public void organizer(){
+    public String organizer(){
 
         if (
                 this.numberOne != this.numberTwo
@@ -42,8 +41,10 @@ public class OrderNumbers {
             OrderNumbers.medium = (this.numberOne + this.numberTwo + this.numberTree) - OrderNumbers.max - OrderNumbers.min;
 
             System.out.println("Mayor: "+OrderNumbers.max +", Medio: "+OrderNumbers.medium+", Menor: "+OrderNumbers.min);
+            return "Mayor: "+OrderNumbers.max +", Medio: "+OrderNumbers.medium+", Menor: "+OrderNumbers.min;
         }else {
             System.out.println("Debes ingresar números diferentes entre sí");
+            return  "Ingresa números diferentes entre sí";
         }
 
 

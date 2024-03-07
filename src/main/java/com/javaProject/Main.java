@@ -85,9 +85,10 @@ public class Main {
 
                 case 6:
                     //Crear figura
-                    System.out.print("Ingresa un número positivo entre 1 y 10: ");
+                    System.out.print("Ingresa un número positivo entre 1 y 8: ");
                     Integer number = scanner.nextInt();
                     AsterisksPattern asterisksPattern = new AsterisksPattern(number);
+                    asterisksPattern.generateTriangle();
                     Main.pressEnter();
                     break;
 
@@ -101,11 +102,13 @@ public class Main {
                     System.out.print("Ingresa tercer número: ");
                     int numberTree = scanner.nextInt();
                     OrderNumbers orderNumbers = new OrderNumbers(numberOne,nuberTwo,numberTree);
+                    orderNumbers.organizer();
                     Main.pressEnter();
                     break;
 
                 case 8:
                     AddRandomNumbers addRandomNumbers = new AddRandomNumbers();
+                    addRandomNumbers.printValues();
                     System.out.print("Ingresa tu respuesta: ");
                     int response = scanner.nextInt();
                     addRandomNumbers.setResponseUser(response);

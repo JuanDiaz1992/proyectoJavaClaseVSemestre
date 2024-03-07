@@ -10,25 +10,33 @@ public class CurrencyConverter {
         this.cop = cop;
         this.option = option;
     }
-    public void conversor(){
+    public String conversor(){
         if (this.option>0 && this.option <3  && this.cop>0 ) {
+            double result;
+            int valueInt;
             switch (this.option){
                 case 1:
                     System.out.println("/////////////////////////////////////////////////////////");
                     System.out.printf("%.2f Dolares\n", this.cop / CurrencyConverter.exchangeRateUsd);
                     System.out.println("/////////////////////////////////////////////////////////");
-                    break;
+                    result = this.cop / CurrencyConverter.exchangeRateUsd;
+                    valueInt = (int) this.cop;
+                    return  "<html>"+valueInt + " Correspone a: "+ String.format("%.2f",result) + " Dolares<html>";
                 case 2:
                     System.out.println("/////////////////////////////////////////////////////////");
                     System.out.printf("%.2f Euros\n", this.cop / CurrencyConverter.exchangeRateEur);
                     System.out.println("/////////////////////////////////////////////////////////");
-                    break;
+                    result = this.cop / CurrencyConverter.exchangeRateEur;
+                    valueInt = (int) this.cop;
+                    return  "<html>"+valueInt + " Correspone a: " + String.format("%.2f",result)+" Euros<html>";
                 default:
                     System.out.println("Opcion errada, intente de nuevo");
+                    return "Opcion errada, intente de nuevo";
             }
         }else {
             System.out.println("Opcion errada, intente de nuevo");
         }
+        return null;
 
     }
 }
