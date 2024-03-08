@@ -1,4 +1,4 @@
-package com.javaProject.clases;
+package com.javaProject.controlers;
 
 public class AsterisksPattern {
     private Integer amount;

@@ -1,4 +1,4 @@
-package com.javaProject.clases;
+package com.javaProject.controlers;
 
 public class OrderNumbers {
     private int numberOne;

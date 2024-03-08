@@ -107,7 +107,7 @@
                               </Group>
                           </Group>
                           <Component id="opc15" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-                          <Component id="jLabel1" alignment="0" min="-2" pref="171" max="-2" attributes="0"/>
+                          <Component id="titleMenu" alignment="0" min="-2" pref="171" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="13" max="32767" attributes="0"/>
                   </Group>
@@ -117,7 +117,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" pref="33" max="-2" attributes="0"/>
+                      <Component id="titleMenu" min="-2" pref="33" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="opc1" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
@@ -391,6 +391,7 @@
                 <Property name="iconTextGap" type="int" value="12"/>
               </Properties>
               <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="opc10MouseClicked"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="opc10ActionPerformed"/>
               </Events>
             </Component>
@@ -412,6 +413,9 @@
                 <Property name="horizontalAlignment" type="int" value="2"/>
                 <Property name="iconTextGap" type="int" value="12"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="opc11MouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="opc12">
               <Properties>
@@ -431,6 +435,9 @@
                 <Property name="horizontalAlignment" type="int" value="2"/>
                 <Property name="iconTextGap" type="int" value="12"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="opc12MouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="opc13">
               <Properties>
@@ -450,6 +457,9 @@
                 <Property name="horizontalAlignment" type="int" value="2"/>
                 <Property name="iconTextGap" type="int" value="12"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="opc13MouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="opc14">
               <Properties>
@@ -469,6 +479,9 @@
                 <Property name="horizontalAlignment" type="int" value="2"/>
                 <Property name="iconTextGap" type="int" value="12"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="opc14MouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="opc15">
               <Properties>
@@ -488,8 +501,11 @@
                 <Property name="horizontalAlignment" type="int" value="2"/>
                 <Property name="iconTextGap" type="int" value="12"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="opc15MouseClicked"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel1">
+            <Component class="javax.swing.JLabel" name="titleMenu">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Harlow Solid Italic" size="24" style="0"/>

@@ -1,4 +1,4 @@
-package com.javaProject.clases;
+package com.javaProject.controlers;
 
 import java.util.Map;
 import java.util.TreeMap;
@@ -12,7 +12,7 @@ public class DeleteDataFromHashMap {
         this.option = option;
 
     }
-    public void runProgram(){
+    public Map runProgram(){
         if (this.option>0 && this.option<10){
             String [] elimitate = new String[this.myHashMap.size()];
             int index = 0;
@@ -27,8 +27,10 @@ public class DeleteDataFromHashMap {
             }
             TreeMap<String, Integer> orderHahsMap = new TreeMap<>(this.myHashMap);
             System.out.println(orderHahsMap);
+            return this.myHashMap;
         }else {
             System.out.println("Elije una opción valida");
+            return null;
         }
 
     }

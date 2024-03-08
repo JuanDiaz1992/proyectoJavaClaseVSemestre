@@ -1,4 +1,4 @@
-package com.javaProject.clases;
+package com.javaProject.controlers;
 import java.util.Random;
 
 public class RockPaperScissors {

@@ -3,24 +3,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package com.graphicInterface.view;
-import com.javaProject.controlers.AddRandomNumbers;
+import com.javaProject.controlers.RemoveOdd;
 
 /**
  *
  * @author juann
  */
-public class AddRandomNumbersView extends javax.swing.JPanel {
-    AddRandomNumbers addRandomNumbers = new AddRandomNumbers();
+public class RemoveOddView extends javax.swing.JPanel {
+
     /**
      * Creates new form LeapYearView
      */
-    public AddRandomNumbersView() {
+    public RemoveOddView() {
         initComponents();
-        this.viewInfo();
-    }
-    public void viewInfo(){
-        String infoReturn = addRandomNumbers.printValues();
-        info.setText(infoReturn);
     }
 
     /**
@@ -32,28 +27,37 @@ public class AddRandomNumbersView extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        info = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         input = new javax.swing.JTextField();
         consult = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         result = new javax.swing.JLabel();
 
         setMinimumSize(new java.awt.Dimension(400, 421));
         setPreferredSize(new java.awt.Dimension(400, 421));
 
-        info.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        info.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel1.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel1.setText("Este programa elimina los números impares de una lista");
 
         input.setBackground(new java.awt.Color(102, 102, 102));
         input.setForeground(new java.awt.Color(255, 255, 255));
 
         consult.setForeground(new java.awt.Color(51, 51, 51));
-        consult.setText("Sumar ➕");
+        consult.setText("Remover");
         consult.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         consult.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 consultMouseClicked(evt);
             }
         });
+
+        jLabel2.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel2.setText("Ingrese una lista de números enteros");
+
+        jLabel3.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel3.setText("Cada número debe ser separado por \",\" ejemplo: 1,2,3,4");
 
         result.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
 
@@ -64,40 +68,59 @@ public class AddRandomNumbersView extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(result, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel3)
                     .addComponent(input, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(consult, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(result, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(info))
+                    .addComponent(jLabel2))
                 .addContainerGap(17, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(info)
-                .addGap(37, 37, 37)
+                .addGap(53, 53, 53)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(input, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(consult, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(result, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1)
+                .addGap(38, 38, 38)
+                .addComponent(result, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(36, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void consultMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_consultMouseClicked
-       String text = input.getText();
-       int cant = Integer.parseInt(text);
-       addRandomNumbers.setResponseUser(cant);
-       String valuReturn = addRandomNumbers.validateAdd();
-       result.setText(valuReturn);
+        // TODO add your handling code here:
+        try{
+            String text = input.getText();
+            String[] textDesintegrate = text.split(",");
+            int[] listNumbers = new int[textDesintegrate.length];
+            for (int i = 0; i < textDesintegrate.length; i++) {
+                listNumbers[i] = Integer.parseInt(textDesintegrate[i]);
+            }
+            RemoveOdd removeOdd = new RemoveOdd(listNumbers);
+            String valuReturn = removeOdd.runProgram();
+            result.setText(valuReturn);
+        }catch(NumberFormatException e){
+            result.setText("Los datos igresados no son validos");
+        }
+
+        
     }//GEN-LAST:event_consultMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton consult;
-    private javax.swing.JLabel info;
     private javax.swing.JTextField input;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel result;
     // End of variables declaration//GEN-END:variables
 }
